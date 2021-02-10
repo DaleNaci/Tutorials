@@ -1,0 +1,12 @@
+{
+	"folders": [
+		{
+			"path": "../../Coding/CppConfigure"
+		}
+	],
+	"settings": {
+		"files.associations": {
+			"ostream": "cpp"
+		}
+	}
+}

@@ -2,6 +2,7 @@ import requests, bs4
 
 exampleFile = open('example.html')
 exampleSoup = bs4.BeautifulSoup(exampleFile, "html.parser")
+print(exampleSoup)
 elems = exampleSoup.select("#author") # elems is a list of Tag objects
 
 type(elems) # <class 'list'>
@@ -23,8 +24,8 @@ str(pElems[2]) # '<p>By <span id="author">Al Sweigart</span></p>'
 pElems[2].getText() # 'By Al Sweigart'
 
 
-spanElem = soup.select('span')[0]
+spanElem = exampleSoup.select('span')[0]
 str(spanElem) # '<span id="author">Al Sweigart</span>'
 spanElem.get('id') # 'author'
 spanElem.get('some_nonexistent_addr') == None # True
-spanElems.attrs {'id': 'author'}
+spanElem.attrs # {'id': 'author'}
